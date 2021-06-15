@@ -71,7 +71,7 @@ function buildMiddleware(options) {
                 if(realmName)
                     challengeString += ' realm="' + realmName + '"'
 
-                res.set('WWW-Authenticate', challengeString)
+                res.setHeader('WWW-Authenticate', challengeString)
             }
 
             //TODO: Allow response body to be JSON (maybe autodetect?)
